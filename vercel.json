@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    {"src": "skin.py", "use": "@vercelpython"}
+    {"src": "skin.py", "use": "@vercel/python"}
   ], 
   "routes": [
     {"src": "/(.*)", "dest": "skin.py"}
