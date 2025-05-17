@@ -4,6 +4,14 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 import os
 
+import requests
+
+def download_from_drive():
+    url = "https://drive.google.com/drive/folders/1DKUryUy5a-nnq5NinUvDlA4g879Sq3d-?dmr=1&ec=wgc-drive-hero-goto"
+    r = requests.get(url)
+    with open("model.h5", "wb") as f:
+        f.write(r.content)
+
 
 app = Flask(__name__)
 
