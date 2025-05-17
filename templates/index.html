@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nano</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">NANO</h2>
+            </div>
+
+            <div id='sidebar' class="sidebar">
+                <a href="#" class='close-btn' onclick='toggleSidebar()'>x</a>
+                <a href="{{ url_for('index') }}">HOME</a>
+                <a href="#">ABOUT</a>
+                <a href="#">DONATE</a>
+                <a href="{{ url_for('skin') }}">SKIN CANCER</a>
+            </div>
+            <button class="open-btn" onclick="toggleSidebar()">☰</button>
+
+        </div>
+        <div class="content">
+            <h1 class="head">Welcome to Nano</h1>
+            <p class="par">We develop programs designed to support individuals with relevant medical needs.</p>
+            <img src="{{ url_for('static', filename='/iStock-1396801868-1024x683.jpgw3.webp') }}" alt="Nano" ,
+                class="img">
+            <h2 class="hi">About Nano</h2>
+            <p class="p">Nano is a company that specializes in developing programs to support individuals with
+                relevant medical needs. Our mission is to provide innovative solutions that improve the quality of life
+                for those affected by various health conditions.Nano is a forward-thinking company dedicated to
+                developing cutting-edge software and technology solutions designed to support individuals with specific
+                medical needs. We focus on creating tools that empower patients, caregivers, and healthcare providers by
+                making health management more accessible, personalized, and effective. <br><br>Our mission is to improve
+                the
+                quality of life for people facing a variety of health challenges through
+                innovation, compassion, and precision. Whether it's helping users track symptoms, adhere to treatment
+                plans, or access critical medical information, Nano’s programs are built with care and supported by
+                research. At Nano, we believe that technology should serve humanity — especially when health is
+                at
+                stake. That’s
+                why we collaborate with medical experts, researchers, and users to ensure every product we release is
+                safe, effective, and truly helpful. <br><br>At Nano, we rely on secure, efficient, and well-structured
+                databases
+                to power our medical programs. Our systems are built using modern database technologies that ensure high
+                performance, scalability, and data integrity. This allows us to store and manage large volumes of
+                sensitive health-related data while maintaining strict privacy and security standards. By designing our
+                databases around user needs, we ensure that information is easily accessible, accurate, and reliable —
+                whether
+                it's for tracking symptoms, managing treatment plans, or generating personalized health insights. Our
+                commitment
+                to strong database architecture helps us deliver fast, trustworthy, and user-friendly solutions for
+                individuals with
+                medical needs.
+            </p>
+            <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+
+</html>
