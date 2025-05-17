@@ -3,5 +3,3 @@ tensorflow
 keras
 numpy
 Pillow
-random
-os
