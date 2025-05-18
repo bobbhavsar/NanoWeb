@@ -4,18 +4,24 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 import os
 import requests
-
+import gdown
 
 
 app = Flask(__name__)
 
 
+FILE_ID = '1OA2UA3QXqvdonQUTleasRLDnLJg-FIhD' 
+MODEL_PATH = 'model.h5'
 
-url = "https://drive.google.com/uc?export=download&id=1OA2UA3QXqvdonQUTleasRLDnLJg-FIhD"
-with open("model.h5", "wb") as f:
-    f.write(requests.get(url).content)
-    
-model = load_model('model.h5')
+# Download model from Google Drive if not already present
+if not os.path.exists(MODEL_PATH):
+    print("Downloading model from Google Drive...")
+    url = f'https://drive.google.com/uc?id=1OA2UA3QXqvdonQUTleasRLDnLJg-FIhD'
+    gdown.download(url, MODEL_PATH, quiet=False)
+    print("Download complete.")
+
+# Load the model after download
+model = load_model(MODEL_PATH)
 
 class_labels = ['benign', 'malignant', 'DS_Store']
 
