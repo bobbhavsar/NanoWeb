@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 
 
-url = "https://drive.google.com/drive/folders/1DKUryUy5a-nnq5NinUvDlA4g879Sq3d-?dmr=1&ec=wgc-drive-hero-goto"
+url = "https://drive.google.com/uc?export=download&id=1OA2UA3QXqvdonQUTleasRLDnLJg-FIhD"
 with open("model.h5", "wb") as f:
     f.write(requests.get(url).content)
     
